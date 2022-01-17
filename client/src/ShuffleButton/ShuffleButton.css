@@ -1,0 +1,19 @@
+.shuffle-button {
+    display: block;
+    margin: 40px auto;
+    background-color: #08171f;
+    font-size: 25px;
+    color:#ffe6b3;
+    padding: 15px;
+    border-radius: 50%;
+    border: 3px solid #ffe6b3;
+    outline: none;
+  }
+
+.shuffle-button:hover {
+    background-color: #3a3a36;
+}
+
+.shuffle-button:active {
+    background-color: #575542;
+}

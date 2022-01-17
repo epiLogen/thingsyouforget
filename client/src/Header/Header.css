@@ -1,0 +1,17 @@
+.App-header {
+    flex: 0 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffe6b3;
+    background-color: black;
+    padding: 5px;
+  }
+  
+  .logo {
+    font-weight: normal;
+    font-size: 40px;
+    font-family: Dancing Script;
+    padding: 5px;
+    background-color: transparent;
+  }

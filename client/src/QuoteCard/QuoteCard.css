@@ -1,0 +1,22 @@
+.quote-card {
+    display: flex;
+    flex-direction: column;
+    color: #ffe6b3;
+    height: auto;
+    width: 500px;
+    padding: 5px;
+    text-align: left;
+    line-height: 1.5em;
+    margin: 10px auto 20px;
+    background-color: black;
+  }
+  .quote-text {
+    margin: 0px 0px 20px;
+    font-family: garamond;
+  }
+  
+  .quote-source {
+    align-self: flex-end;
+    font-family: garamond;
+    font-weight: bold;
+  }
