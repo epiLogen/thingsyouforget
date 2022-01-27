@@ -4,6 +4,7 @@ const auth = require('../middleware/auth');
 const router = express.Router();
 
 router.get('/', async (req, res) => {
+    console.log('quotes requested');
     try {
         const quotes = await Quote.find();
         res.header('Content-Range', 'posts 0-10/100');

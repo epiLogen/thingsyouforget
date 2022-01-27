@@ -10,6 +10,6 @@ const httpClient = (url, options = {}) => {
     return fetchUtils.fetchJson(url, options);
 };
 
-const dataProvider = simpleRestProvider('http://localhost:3001', httpClient);
+const dataProvider = simpleRestProvider('http://localhost:80/quotes', httpClient);
 
 export default dataProvider;

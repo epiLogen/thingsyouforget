@@ -12,7 +12,7 @@ const authProvider = (type, params) => {
     if(type == AUTH_LOGIN) {
         const  { username, password } = params;
 
-        const request = new Request('http://localhost:3001/admin/login', {
+        const request = new Request('http://localhost:80/login', {
             method: 'POST',
             body: JSON.stringify({username : username, password : password}),
             headers: new Headers({'Content-Type': 'application/json'})

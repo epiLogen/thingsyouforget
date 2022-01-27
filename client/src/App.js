@@ -16,7 +16,7 @@ const App = (props) => {
   };
 
   useEffect(() => {
-    axios.get('http://localhost:3001/quotes')
+    axios.get('http://localhost:80/quotes')
     .then(resp => {
       setQuotes(resp.data);
       setCurrent(randomQuote(resp.data));

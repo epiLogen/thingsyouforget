@@ -1,0 +1,49 @@
+version: "3.9"
+services:
+  nginx:
+    build: ./nginx
+    ports:
+      - "80:80"
+    networks:
+      - tyf-net
+    depends_on:
+      - backend
+      - client
+      - admin
+    restart: always
+    #volumes:
+    #  - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+  client:
+    build: ./client
+    networks:
+      - tyf-net
+    #ports:
+    #  - "3000:80"
+    depends_on:
+      - backend
+    restart: always
+    #volumes:
+    #  - ./client:/app/client
+  #admin:
+  #  build: ./admin
+  #  networks:
+  #    - tyf-net
+    #ports:
+    #  - "3001:80"
+  #  depends_on:
+  #    - backend
+  #  restart: always
+    #volumes:
+    #  - ./admin:/app/admin
+  backend:
+    build: ./backend
+    networks:
+      - tyf-net
+    #ports:
+    #  - "5000:5000"
+    restart: always
+    volumes:
+      - ./backend:/app/backend
+networks:
+  tyf-net:
+    driver: bridge

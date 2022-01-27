@@ -3,12 +3,12 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
-const adminSchema = new Schema({
+const userSchema = new Schema({
     name: String,
     password: String
 });
 
-adminSchema.method('transform', () => {
+userSchema.method('transform', () => {
     let obj = this.toObject();
 
     obj.id = obj._id;
@@ -16,16 +16,16 @@ adminSchema.method('transform', () => {
     delete obj.__v;
 });
 
-adminSchema.virtual('id').get(function(){
+userSchema.virtual('id').get(function(){
     return this._id.toHexString();
 });
 
 // Ensure virtual fields are serialised.
-adminSchema.set('toJSON', {
+userSchema.set('toJSON', {
     virtuals: true
 });
 
 
-const Admin = mongoose.model('Admin', adminSchema, 'admin');
+const User = mongoose.model('User', userSchema,);
 
-module.exports = Admin;
+module.exports = User;

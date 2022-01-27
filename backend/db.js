@@ -2,14 +2,15 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 const {
-    MONGO_HOSTNAME,
+    MONGO_HOST,
     MONGO_DB,
-    MONGO_PORT
+    MONGO_PORT,
+    MONGO_ADMIN,
+    MONGO_ADMIN_PASS
 } = process.env;
 
-const dbURL = `mongodb://${MONGO_HOSTNAME}:${MONGO_PORT}/${MONGO_DB}`;
-
-mongoose.connect(dbURL, { useNewUrlParser: true });
+const URL = `mongodb+srv://${MONGO_ADMIN}:${MONGO_ADMIN_PASS}@${MONGO_HOST}/${MONGO_DB}?retryWrites=true&w=majority`;
+mongoose.connect(URL, { useNewUrlParser: true });
 const db = mongoose.connection;
 
 db.once('open', () => {
