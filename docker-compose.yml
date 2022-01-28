@@ -24,15 +24,15 @@ services:
     restart: always
     #volumes:
     #  - ./client:/app/client
-  #admin:
-  #  build: ./admin
-  #  networks:
-  #    - tyf-net
+  admin:
+    build: ./admin
+    networks:
+      - tyf-net
     #ports:
     #  - "3001:80"
-  #  depends_on:
-  #    - backend
-  #  restart: always
+    depends_on:
+      - backend
+    restart: always
     #volumes:
     #  - ./admin:/app/admin
   backend:
