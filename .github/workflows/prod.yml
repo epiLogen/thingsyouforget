@@ -22,27 +22,27 @@ jobs:
         name: Build and push Client
         uses: docker/build-push-action@v2.8.0
         with:
-          context: client
+          context: /client
           push: true
           tags: epiii/thingsyouforget-client:latest
       -
         name: Build and push Nginx
         uses: docker/build-push-action@v2.8.0
         with:
-          context: nginx
+          context: /nginx
           push: true
           tags: epiii/thingsyouforget-nginx:latest
       -
         name: Build and push Admin
         uses: docker/build-push-action@v2.8.0
         with:
-          context: admin
+          context: /admin
           push: true
           tags: epiii/thingsyouforget-admin:latest
       -
         name: Build and push Backend
         uses: docker/build-push-action@v2.8.0
         with:
-          context: backend
+          context: /backend
           push: true
           tags: epiii/thingsyouforget-backend:latest
