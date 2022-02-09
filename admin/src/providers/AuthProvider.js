@@ -6,18 +6,12 @@ import {
     AUTH_GET_PERMISSIONS
 } from 'react-admin';
 
-require('dotenv').config();
-const {
-    HOST_IP,
-    HOST_PORT,
-} = process.env;
-
 const authProvider = (type, params) => {
 
     if(type == AUTH_LOGIN) {
         const  { username, password } = params;
 
-        const request = new Request(`http://${HOST_IP}:${HOST_PORT}/login`, {
+        const request = new Request(`http://${process.env.REACT_APP_HOST}/login`, {
             method: 'POST',
             body: JSON.stringify({username : username, password : password}),
             headers: new Headers({'Content-Type': 'application/json'})

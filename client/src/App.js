@@ -5,11 +5,6 @@ import Header from './Header/Header';
 import QuoteCard from './QuoteCard/QuoteCard';
 import ShuffleButton from './ShuffleButton/ShuffleButton';
 import Footer from './Footer/Footer';
-require('dotenv').config();
-const {
-    HOST_IP,
-    HOST_PORT,
-} = process.env;
 
 const App = (props) => {
 
@@ -21,7 +16,7 @@ const App = (props) => {
   };
 
   useEffect(() => {
-    axios.get(`http://${HOST_IP}:${HOST_PORT}/quotes`)
+    axios.get(`http://${process.env.REACT_APP_HOST}/quotes`)
     .then(resp => {
       setQuotes(resp.data);
       setCurrent(randomQuote(resp.data));

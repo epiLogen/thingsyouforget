@@ -1,10 +1,5 @@
 import simpleRestProvider from 'ra-data-simple-rest';
 import { fetchUtils } from 'react-admin';
-require('dotenv').config();
-const {
-    HOST_IP,
-    HOST_PORT,
-} = process.env;
 
 const httpClient = (url, options = {}) => {
     if (!options.headers) {
@@ -15,6 +10,6 @@ const httpClient = (url, options = {}) => {
     return fetchUtils.fetchJson(url, options);
 };
 
-const dataProvider = simpleRestProvider(`http://${HOST_IP}:${HOST_PORT}/login`, httpClient);
+const dataProvider = simpleRestProvider(`http://${process.env.REACT_APP_HOST}/login`, httpClient);
 
 export default dataProvider;
