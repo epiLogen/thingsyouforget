@@ -1,5 +1,6 @@
 import simpleRestProvider from 'ra-data-simple-rest';
 import { fetchUtils } from 'react-admin';
+require('dotenv').config();
 
 const httpClient = (url, options = {}) => {
     if (!options.headers) {

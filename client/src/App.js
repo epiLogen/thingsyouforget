@@ -5,6 +5,7 @@ import Header from './Header/Header';
 import QuoteCard from './QuoteCard/QuoteCard';
 import ShuffleButton from './ShuffleButton/ShuffleButton';
 import Footer from './Footer/Footer';
+require('dotenv').config();
 
 const App = (props) => {
 
