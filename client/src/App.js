@@ -5,7 +5,6 @@ import Header from './Header/Header';
 import QuoteCard from './QuoteCard/QuoteCard';
 import ShuffleButton from './ShuffleButton/ShuffleButton';
 import Footer from './Footer/Footer';
-require('dotenv').config();
 
 const App = (props) => {
 
@@ -17,7 +16,7 @@ const App = (props) => {
   };
 
   useEffect(() => {
-    axios.get(`https://${process.env.REACT_APP_HOST}/quotes`)
+    axios.get('https://thingsyouforget.com/quotes')
     .then(resp => {
       setQuotes(resp.data);
       setCurrent(randomQuote(resp.data));

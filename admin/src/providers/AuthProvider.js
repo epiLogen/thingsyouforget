@@ -5,14 +5,13 @@ import {
     AUTH_CHECK,
     AUTH_GET_PERMISSIONS
 } from 'react-admin';
-require('dotenv').config();
 
 const authProvider = (type, params) => {
 
     if(type == AUTH_LOGIN) {
         const  { username, password } = params;
 
-        const request = new Request(`https://${process.env.REACT_APP_HOST}/login`, {
+        const request = new Request('https://thingsyouforget.com/login', {
             method: 'POST',
             body: JSON.stringify({username : username, password : password}),
             headers: new Headers({'Content-Type': 'application/json'})

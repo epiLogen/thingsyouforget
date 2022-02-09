@@ -1,6 +1,5 @@
 import simpleRestProvider from 'ra-data-simple-rest';
 import { fetchUtils } from 'react-admin';
-require('dotenv').config();
 
 const httpClient = (url, options = {}) => {
     if (!options.headers) {
@@ -11,6 +10,6 @@ const httpClient = (url, options = {}) => {
     return fetchUtils.fetchJson(url, options);
 };
 
-const dataProvider = simpleRestProvider(`https://${process.env.REACT_APP_HOST}/login`, httpClient);
+const dataProvider = simpleRestProvider('https://thingsyouforget.com/login', httpClient);
 
 export default dataProvider;
