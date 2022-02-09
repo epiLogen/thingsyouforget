@@ -17,7 +17,7 @@ const App = (props) => {
   };
 
   useEffect(() => {
-    axios.get(`http://${process.env.REACT_APP_HOST}/quotes`)
+    axios.get(`https://${process.env.REACT_APP_HOST}/quotes`)
     .then(resp => {
       setQuotes(resp.data);
       setCurrent(randomQuote(resp.data));
