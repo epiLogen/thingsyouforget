@@ -10,6 +10,6 @@ const httpClient = (url, options = {}) => {
     return fetchUtils.fetchJson(url, options);
 };
 
-const dataProvider = simpleRestProvider('https://thingsyouforget.com/login', httpClient);
+const dataProvider = simpleRestProvider('https://thingsyouforget.com', httpClient);
 
 export default dataProvider;

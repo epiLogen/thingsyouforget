@@ -12,11 +12,11 @@
   }
   .quote-text {
     margin: 0px 0px 20px;
-    font-family: garamond;
+    font-family: 'EB Garamond', serif;
   }
   
   .quote-source {
     align-self: flex-end;
-    font-family: garamond;
+    font-family: 'EB Garamond', serif;
     font-weight: bold;
   }
