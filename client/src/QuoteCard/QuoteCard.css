@@ -9,14 +9,26 @@
     line-height: 1.5em;
     margin: 10px auto 20px;
     background-color: black;
+    font-size: 1.2em;
   }
   .quote-text {
     margin: 0px 0px 20px;
     font-family: 'EB Garamond', serif;
+    font-weight: 400;
   }
   
   .quote-source {
     align-self: flex-end;
+  }
+
+  .author {
     font-family: 'EB Garamond', serif;
-    font-weight: bold;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .book {
+    font-family: 'EB Garamond', serif;
+    font-weight: 700;
+    font-style: italic;
   }

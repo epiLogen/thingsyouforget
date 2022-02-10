@@ -12,6 +12,7 @@
 
 .shuffle-button:hover {
     background-color: #3a3a36;
+    cursor: pointer;
 }
 
 .shuffle-button:active {
