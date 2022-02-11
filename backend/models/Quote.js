@@ -6,7 +6,8 @@ const Schema = mongoose.Schema;
 const quoteSchema = new Schema({
     text: String,
     book: String,
-    author: String
+    author: String,
+    voice: String
 });
 
 quoteSchema.method('transform', () => {
