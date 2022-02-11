@@ -7,8 +7,9 @@ const quoteedit = (props) => {
             <SimpleForm>
                 <TextInput disabled source='id' />
                 <TextInput multiline source='text' />
-                <TextInput source='book' />
+                <TextInput source='voice' />
                 <TextInput source='author' />
+                <TextInput source='book' />
                 
             </SimpleForm>
         </Edit>

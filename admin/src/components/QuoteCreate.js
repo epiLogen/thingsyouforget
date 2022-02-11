@@ -6,8 +6,9 @@ const quotecreate = (props) => {
         <Create title='Create a Quote' {...props}>
             <SimpleForm>
                 <TextInput multiline source='text' />
-                <TextInput source='book' />
+                <TextInput source='voice' />
                 <TextInput source='author' />
+                <TextInput source='book' />
                 
             </SimpleForm>
         </Create>

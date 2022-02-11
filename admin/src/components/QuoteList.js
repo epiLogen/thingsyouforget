@@ -13,6 +13,7 @@ const quotelist = (props) => {
             <Datagrid>
                 <TextField source='id' />
                 <TextField source='text' />
+                <TextField source='voice' />
                 <TextField source='author' />
                 <TextField source='book' />
                 <EditButton basePath='/quotes' />
