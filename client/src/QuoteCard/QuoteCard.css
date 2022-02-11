@@ -21,14 +21,25 @@
     align-self: flex-end;
   }
 
-  .author {
+  .voice {
     font-family: 'EB Garamond', serif;
     font-weight: 700;
     font-style: normal;
   }
 
-  .book {
+  .source {
     font-family: 'EB Garamond', serif;
-    font-weight: 700;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(73, 66, 66);
+    font-size: 0.85em;
+    padding-left: 10px;
+  }
+
+  .author {
+    font-style: normal;
+  }
+
+  .book {
     font-style: italic;
   }

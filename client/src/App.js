@@ -27,7 +27,7 @@ const App = (props) => {
     <div className="App">
       <Header />
       <div className="App-main">
-        <QuoteCard text={current.text} book={current.book} author={current.author}/>
+        <QuoteCard text={current.text} book={current.book} author={current.author} voice={current.voice}/>
         <ShuffleButton click={() => setCurrent(randomQuote(quotes))}/>
       </div>
       <Footer />
