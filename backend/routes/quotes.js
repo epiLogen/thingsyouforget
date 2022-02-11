@@ -19,7 +19,8 @@ router.post('/', auth, async (req, res) => {
     const quote = new Quote({
         text: req.body.text,
         book: req.body.book,
-        author: req.body.author
+        author: req.body.author,
+        voice: req.body.voice
     });
 
     await quote.save();
@@ -42,6 +43,7 @@ router.put('/:id', auth, async (req, res) => {
         quote.text = req.body.text;
         quote.book = req.body.book;
         quote.author = req.body.author;
+        quote.voice = req.body.voice;
 
         await quote.save();
         res.send(quote);
