@@ -44,9 +44,9 @@
     font-style: italic;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 600px) {
     .quote-card {
       font-size: 1em;
-      width: 450px;
+      width: 350px;
     }
   }
