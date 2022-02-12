@@ -43,3 +43,10 @@
   .book {
     font-style: italic;
   }
+
+  @media (max-width: 800px) {
+    .quote-card {
+      font-size: 1em;
+      width: 450px;
+    }
+  }
