@@ -1,8 +1,9 @@
 import React from 'react';
 import './Footer.css';
 
-const footer = () => {
-    return <footer className="App-footer">&#169; epiLogen 2022</footer>
+
+const footer = (props) => {
+    return <footer className="App-footer">&copy; epiLogen 2022 &ensp;&bull;&ensp; {props.count} quotes</footer>
 };
 
 export default footer;

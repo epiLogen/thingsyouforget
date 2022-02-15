@@ -1,8 +1,8 @@
 .App-footer {
     flex: 0 0 20px;
+    text-align: center;
     color: #ffe6b3;
     background-color: black;
-    text-align: center;
     font-family: 'EB Garamond', serif;
     font-size: 1em;
     padding: 5px 0px;

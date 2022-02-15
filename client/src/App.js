@@ -30,7 +30,7 @@ const App = (props) => {
         <QuoteCard text={current.text} book={current.book} author={current.author} voice={current.voice}/>
         <ShuffleButton click={() => setCurrent(randomQuote(quotes))}/>
       </div>
-      <Footer />
+      <Footer count={quotes.length}/>
     </div>
   );
       
