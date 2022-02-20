@@ -29,7 +29,8 @@ const App = (props) => {
     .then(resp => {
       setQuotes(resp.data);
       setCurrent(randomQuote(resp.data, current));
-    });
+    })
+    .catch(err => console.log(err));
   }, []);
 
   return (

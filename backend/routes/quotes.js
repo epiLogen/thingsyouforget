@@ -16,15 +16,19 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', auth, async (req, res) => {
-    const quote = new Quote({
-        text: req.body.text,
-        book: req.body.book,
-        author: req.body.author,
-        voice: req.body.voice
-    });
+    try {
+        const quote = new Quote({
+            text: req.body.text,
+            book: req.body.book,
+            author: req.body.author,
+            voice: req.body.voice
+        });
 
-    await quote.save();
-    res.send(quote);
+        await quote.save();
+        res.status(200).send(quote);
+    } catch (error) {
+        res.status(500).send(error);
+    }
 });
 
 router.get('/:id', async (req, res) => {
@@ -46,7 +50,7 @@ router.put('/:id', auth, async (req, res) => {
         quote.voice = req.body.voice;
 
         await quote.save();
-        res.send(quote);
+        res.status(200).send(quote);
     } catch (error) {
         res.status(404).send(error);
     }
